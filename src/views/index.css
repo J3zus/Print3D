@@ -1,0 +1,268 @@
+.div1{
+    width: 180px;
+    height: 180px;
+    padding: 15px;
+    border: 3px solid #ffa23e;
+    margin: 2px 2px 2px 2px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+::-webkit-scrollbar{
+    height: 10px;
+    width: 10px;
+    background: #4B709A;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ffa23e;
+    border-radius: 5px;
+}
+
+.div1 ::-webkit-scrollbar-corner{
+    background: #A3C1F7;
+}
+
+.div1 h1{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+}
+
+.input-container{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-container label{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    top: 0px;
+    left: 0px;
+    font-size: 14px;
+    pointer-events: none;
+    position: absolute;
+    transition:  all 0.2s ease-in-out;
+
+}
+
+.Lb{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    margin: 2px 2px 2px 12px;
+}
+
+.input-container input{
+    border: 0;
+    border-bottom: 2px solid #ffa23e;
+    outline: 0;
+    color: white;
+    background: transparent;
+    height: 15%;
+    padding: 8px 0 5px 0;
+    font-size: 14px;
+}
+
+.input-container input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:10px;
+	
+}
+
+.div0{
+    width: 670px;
+    height: 665px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.div2{
+    width: 265px;
+    height: 655px;
+    overflow: hidden;
+    display: inline-block;
+    border: 3px solid #ffa23e;
+    border-radius: 10px;
+    position: relative;
+}
+.div2 h1{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+}
+
+.Btn-Calcular{
+    position: relative;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 8px 18px;
+    font-size: 16px;
+
+    border-width: 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #b71c1c;
+    color: #ecf0f1;
+}
+
+.Btn-Calcular:hover, .Btn-Calcular:focus{
+    background-color: #961910;
+}
+
+.Btn-Calcular > * {
+    position: relative;
+}
+
+.Btn-Calcular::before{
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+    border-radius: 4%;
+
+    background-color: rgba(236, 240, 241, .3);
+  
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.Btn-Calcular:active::before{
+    width: 100%;
+    padding-top: 36%;
+
+    transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.Btn-Limpiar{
+    position: relative;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 8px 18px;
+    font-size: 16px;
+
+    border-width: 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #ffa23e;
+    color: #ecf0f1;
+}
+
+.Btn-Limpiar:hover, .Btn-Limpiar:focus{
+    background-color: #d18e46;
+}
+
+.Btn-Limpiar > * {
+    position: relative;
+}
+
+.Btn-Limpiar::before{
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+    border-radius: 4%;
+
+    background-color: rgba(236, 240, 241, .3);
+  
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.Btn-Limpiar:active::before{
+    width: 100%;
+    padding-top: 38%;
+
+    transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.DivButtons{
+    width: 245px;
+    height: 165px;
+    padding: 5px;
+    margin: 2px 2px 2px 2px;
+    overflow: hidden;
+}
+
+.Btn-About{
+    position: relative;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 6px 16px;
+    font-size: 15px;
+
+    border-width: 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #ffa23e;
+    color: #ecf0f1;
+}
+
+.Btn-About:hover, .Btn-About:focus{
+    background-color: #d18e46;
+}
+
+.Btn-About > *{
+    position: relative;
+}
+.Btn-About::before{
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+    border-radius: 4%;
+
+    background-color: rgba(236, 240, 241, .3);
+  
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.Btn-About:active::before{
+    width: 100%;
+    padding-top: 38%;
+
+    transition: width .2s ease-out, padding-top .2s ease-out;
+}

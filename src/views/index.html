@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="../views/JS/app.js"></script>
+    <script type="text/javascript" src="../index.js"></script>
+    <title>Calculadora de Impresion 3D by J3s-Fu</title>
+</head>
+<body>
+
+    <form action="" id="form1">
+
+        <div class="div0">
+    
+                <div class="div1">
+                    <h1>Material</h1><br>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="costo-material" step="0.001" required />
+                        <label>Costo Material [$]</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="cantidad-material" step="0.001" required />
+                        <label>Cantidad [kg]</label>
+                    </div>
+                </div>
+
+                <div class="div1">
+                    <h1>Electricidad</h1><br>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="costo-electricidad" step="0.001" required>
+                        <label> Costo electricidad [$/kWh]</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="consumo-impresora" step="0.001" required>
+                        <label>Consumo de impresora [kW]</label>
+                    </div>
+                </div>
+
+                <div class="div1">
+                    <h1>Tasa de Fallos</h1><br>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="porcentaje-fallos" step="0.001" required>
+                        <label>Procentaje de fallos [%]</label>
+                    </div>
+                </div>
+
+                <div class="div1">
+                    <h1>Coste Operador</h1><br>
+                    
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="coste-x-hora-operador" step="0.001" required>
+                        <label>Coste por hora [$]</label>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="tiempo-trabajo-operador" step="0.001" required>
+                        <label>Tiempo de trabajo [H]</label>
+                    </div>
+                </div>
+
+                <div class="div1">
+                    <h1>Impresion</h1><br>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="masa-pieza" step="0.001" required>
+                        <label>Masa de la pieza [kg]</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="tiempo-impresion" step="0.001" required>
+                        <label>Tiempo de impresion [min]</label>
+                    </div>
+                </div>
+
+                <div class="div1">
+                    <h1>Ganancia</h1><br>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="porcentaje-ganancia" step="0.001" required>
+                        <label>Porcentaje de ganancia [%]</label>
+                    </div>
+                </div>
+
+                <div class="div1">
+                    <h1>Transporte</h1><br>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="costo-transporte" step="0.001" required>
+                        <label>Costo de transp. de pz. [$]</label>
+                    </div>
+                </div>
+
+                <div class="div1">
+                    <h1>Alquiler</h1><br>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="pago-alquiler" step="0.001" required>
+                        <label>Pago mensual del alquiler [$]</label>
+                    </div>  
+                </div>
+
+                <div class="div1" style="overflow-y: auto; ">
+                    <h1>Amortizacion</h1>
+
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="coste-impresora" step="0.001" required>
+                        <label>Coste impresora [$]</label>
+                    </div>
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="tiempo-amortizacion" step="0.001" required>
+                        <label>Tiempo de amortiz. [A]</label>
+                    </div>
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="dias-activa" step="0.001" required>
+                        <label>Dias activa del año</label>
+                    </div>
+                    <div class="input-container">
+                        <input onblur="ValidarNumeros();" type="number" min="0" id="horas-x-dia" step="0.001" required>
+                        <label>Horas por dia</label>
+                    </div>
+                </div>
+        </div>
+
+        <div class="div2">
+            <h1>Resultados</h1> <br>
+
+            <label class="Lb">Plastico: $</label><label class="Lb" id="n1">0</label><br><br>
+            <label class="Lb">Electricidad: $</label><label class="Lb" id="n2">0</label><br><br>
+            <label class="Lb">Preparacion: $</label><label class="Lb" id="n3">0</label><br><br>
+            <label class="Lb">Coste amortizacion: $</label><label class="Lb" id="n4">0</label><br><br>
+            <label class="Lb">Coste fallos: $</label><label class="Lb" id="n5">0</label><br><br>
+            <label class="Lb">Coste pieza: $</label><label class="Lb" id="n6">0</label><br><br>
+            <label class="Lb">IVA(20%): $</label><label class="Lb" id="n7">0</label><br><br>
+            <label class="Lb">Coste Total: $</label><label class="Lb" id="n8">0</label><br><br>
+            <br><br>
+            <label class="Lb">Alquiler x dia: $</label><label class="Lb" id="n9">0</label><br>
+            <label class="Lb">*No se suma al total*</label><br><br>
+            
+            <div class="DivButtons">
+                <button class="Btn-Calcular" type="button" onclick="GetData()">Calcular</button>
+                <button class="Btn-Limpiar" type="button" onclick="ClearData()">Limpiar</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="Btn-About" type="button" onclick="AboutF()">About</button>
+            </div>
+            
+
+        </div>
+    </form>
+    
+</body>
+</html>
